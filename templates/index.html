@@ -1,33 +1,41 @@
+html_content = """
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiều Duyên</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #ff9a8b, #66a6ff);
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        h1 {
-            color: #d81b60;
-            font-size: 4em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            height: 100vh;
             margin: 0;
-            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Arial', sans-serif;
         }
-        h1:hover {
-            transform: scale(1.1);
+        
+        .name {
+            font-size: 72px;
+            font-weight: bold;
+            color: #ff6b6b;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            animation: fadeIn 2s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
-    <h1>Kiều Duyên</h1>
+    <div class="name">Kiều Duyên</div>
 </body>
 </html>
+"""
+
+# Lưu vào file HTML
+with open("kieu_duyen.html", "w", encoding="utf-8") as file:
+    file.write(html_content)
+
+print("Đã tạo file kieu_duyen.html thành công!")
